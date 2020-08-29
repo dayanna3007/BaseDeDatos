@@ -8,7 +8,7 @@ create table Cliente (
 constraint pk_Id_cliente primary key (Id_cliente)
 );
 
-drop table Servicio;
+drop table Detalle_Servicio;
 insert into Cliente (Id_cliente, Nombre, Apellido, Direccion, Identificacion) values (1,'Matias','Lucas','Manta', '1985647568'), (2,'Gabriel','Lucas','San Pedro', '1305641254'),
 (3,'Ana','Reyes','San Mateo', '1307841254'),(4,'Karla','Franco','Los Esteros', '1305612351'),(5,'Mateo','Alvia','San Pedro', '1301233554');
 select * from Cliente;
@@ -28,3 +28,4 @@ constraint pk_Id_servicio primary key (Id_servicio, Id_cliente)
 insert into Servicio ( Id_servicio, Id_cliente, Fecha_servicio, Nom_Fallecido, Causa_muerte) values(1,1, '27-08-2020', 'Matias Lucas', 'Infarto'),(2,2, '28-08-2020', 'Gabriel Lucas', 'Accidente'),
 (3,3, '25-08-2020', 'Nanci Lucas', 'COVID 19'),(4,4, '23-08-2020', 'Juan Flores', 'COVID 19'), (5,5, '24-08-2020', 'Adrian Holguin', 'Infarto');
 select * from Servicio;
+
